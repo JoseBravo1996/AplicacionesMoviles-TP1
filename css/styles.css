@@ -1,3 +1,22 @@
+html,
 body {
-  background: orange;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.09rem;
+}
+
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-nav {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
 }
