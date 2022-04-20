@@ -13,18 +13,22 @@
 }
 
 body {
-  box-sizing: border-box;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background: #ccc;
+}
+
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 100px);
+  height: 80%;
 }
 
 /* HEADER */
 
 header {
-  width: 100%;
-  overflow: hidden;
-  background: #f0f2f2;
   height: 10%;
+  background: var(--colorSecundario);
+  display: flex;
 }
 
 nav {
@@ -49,50 +53,11 @@ nav {
   font-size: 20px;
 }
 
-@media screen and (max-width: 950px) {
-  header .logo,
-  header nav img{
-    width: 20%;
-    text-align: center;
-    line-height: 100px;
-  }
-
-  .nav-links{
-    padding: 0;
-  }
-}
-
-/* BODY */
-
-#contenido {
-  height: 80%;
-}
-
-#section {
-  overflow: auto;
-  height: 100%;
-  width: 85%;
-  background: #a4a4a4;
-  float: right;
-}
-
-/* FOOTER */
-
-footer {
-  height: 10%;
-  background: #1d2026;
-}
-
-/* SIDEBAR  */
+/* SIDEBAR */
 
 .sidebar {
+  min-width: 200px;
   background: var(--colorPrincial);
-  width: 15%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  float: left;
 }
 
 .sidebar h2 {
@@ -122,6 +87,11 @@ footer {
 
 /* FOOTER */
 
+footer {
+  height: 10%;
+  background: var(--colorPrincial);
+}
+
 footer .copy {
   display: flex;
   justify-content: center;
@@ -146,69 +116,28 @@ footer .copy {
   color: var(--colorPrincial);
 }
 
-/* CARDS */
+/* CONTENT */
 
-.articulo {
+.content {
+  flex-grow: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: wrap;
-  width: 95%;
+  height: 100%;
 }
 
-.card {
-  width: 20%;
-  background: #fff;
-  border: 1px solid #ccc;
-  margin-bottom: 50px;
-  transition: 0.3s;
-}
-
-.card-header {
-  padding: 5px 5px;
-  background: linear-gradient(
-    to right,
-    var(--colorPrincial),
-    var(--colorPrincialLight)
-  );
-  color: #fff;
-}
-
-.card-header img {
-  width: 100%;
-}
-
-.card-body {
-  padding: 15px 10px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (max-width: 1000px) {
-  .card {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  article {
-    width: 100%;
+/* MEDIA QUERIES */
+@media only screen and (max-width: 992px) {
+  .main-container {
+    flex-direction: column-reverse;
   }
 
-  .card {
-    width: 80%;
+  .sidebar {
+    height: 150px;
   }
 }
 
 .ifFooter {
   width: 100% !important;
-  height: 340px;
+  /* height: 340px; */
   position: inherit;
   left: 0;
   bottom: 0;
