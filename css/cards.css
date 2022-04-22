@@ -1,9 +1,8 @@
 /* CARDS */
 body {
-    min-height: 100vh;
-    font-family: "Poppins", sans-serif;
-  }
-
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
 
 .articulo {
   display: flex;
@@ -61,4 +60,39 @@ body {
   .card {
     width: 80%;
   }
+}
+
+.formulario {
+  background: #f9feff;
+}
+
+.formulario form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.formulario form label {
+  display: block;
+}
+
+.formulario form p {
+  margin: 0;
+}
+
+.formulario form .full {
+  grid-column: 1 / 3;
+}
+
+.formulario form button,
+.formulario form input,
+.formulario form textarea {
+  width: 100%;
+  padding: 1em;
+}
+
+.formulario form button {
+  background: #c9e6ff;
+  border: 0;
+  text-transform: uppercase;
 }
